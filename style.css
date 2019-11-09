@@ -1,7 +1,12 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
 
+html {
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
 
 /* -------------------------------------------------- */
 
@@ -40,3 +45,117 @@ notebook/pc:
 */
 
 /* tvoje styly sem */
+
+.h1 {
+    font-weight: 800;
+}
+
+.hlavni-recept {
+    background: url("Images/burger.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 330px;
+    min-height: 200px;
+    position: relative;
+}
+
+.recept2 {
+    background: url("Images/sushi.jpg") no-repeat;
+}
+
+.recept3 {
+    background: url("Images/rajcata.jpg") no-repeat;
+}
+
+.recept4 {
+    background: url("Images/kure.jpg") no-repeat;
+}
+
+.recept5 {
+    background: url("Images/grilovani.jpg") no-repeat;
+}
+
+.recept-kategorie {
+    color: white;
+    position: absolute;
+    padding: 10px;
+}
+
+.recept-komentare {
+    color: white;
+    position: absolute;
+    padding: 10px;
+    right: 0;
+}
+
+.recept-nazev {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.recept-nazev.burger {
+    font-size: 28px;
+}
+
+.recept {
+    min-height: 90px;
+    background-size: 300px;
+    background-position: 50% 50%;
+    position: relative;
+    text-shadow: 1px 1px 20px black;
+    border: 0.3px solid white;
+}
+
+@media (min-width:300px) {
+    .hlavni-recept {
+        min-height: 250px;
+        background-size: 700px;
+    }
+    .recept {
+        min-height: 150px;
+        width: 100%;
+        background-size: 450px;
+    }
+    .recept-kategorie, .recept-komentare, .recept-nazev {
+        padding: 20px;
+    }
+    .sloupec {
+        display: flex;
+        width: 100%;
+    }
+    .recept-nazev {
+        font-size: 22px;
+    }
+    .recept-nazev.burger {
+        font-size: 36px;
+    }
+}
+
+@media (min-width:700px) {
+    .hlavni-recept {
+        min-height: 400px;
+        background-size: 800px;
+        width: 80%;
+    }
+    .recept {
+        min-height: 200px;
+        width: 100%;
+        background-size: 550px;
+    }
+    .jedlo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .recept-nazev {
+        font-size: 28px;
+    }
+    .recept-nazev.burger {
+        font-size: 48px;
+    }
+    .doporucujeme {
+        display: flex;
+    }
+}
